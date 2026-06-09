@@ -123,13 +123,13 @@ Les méthodes ENMO et Brønd reproduisent correctement la progression des activi
 
 ### Corrélations et Bland-Altman
 
-![MET prédit vs MET réel](images/fig10_met_predit_vs_reel.png)
+![MET prédit vs MET réel](images/fig10_predit_vs_reel.png)
 
 ![Bland-Altman](images/fig11_bland_altman.png)
 
 ### Classifieur KNN
 
-![Résultats KNN](images/fig7_knn_classifieur.png)
+![Résultats KNN](images/fig7_knn.png)
 
 - **Meilleur k** : 10 — Précision : **85,05 %**
 - Course 1 : 23/24 correctement classifiées | Course 2 : 32/34
