@@ -11,10 +11,6 @@ Analyse de signaux accélérométriques pour l'estimation de la dépense énerg�
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white)
 
-<br/>
-
-![Pipeline overview](images/fig3_comparaison_methodes.png)
-
 </div>
 
 ---
