@@ -34,7 +34,7 @@ Trois méthodes issues de la littérature scientifique sont implémentées et co
 **Estimation du MET**
 - Méthode ENMO : norme euclidienne avec calibration par la marche
 - Méthode Counts ActiGraph : reproduction du pipeline ActiGraph à partir de données brutes
-- Méthode Berger - classification par seuils ROC
+- Méthode Berger : classification par seuils ROC
 
 **Machine Learning**
 - Classifieur KNN avec optimisation du paramètre k
