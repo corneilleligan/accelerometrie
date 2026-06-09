@@ -2,7 +2,7 @@
 
 # Traitement de Données d'Accélérométrie
 
-Analyse de signaux accélérométriques pour l'estimation de la dépense énergétique (MET) — comparaison de méthodes scientifiques et classification supervisée KNN.
+Analyse de signaux accélérométriques pour l'estimation de la dépense énergétique (MET) - comparaison de méthodes scientifiques et classification supervisée KNN.
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white)
@@ -32,9 +32,9 @@ Trois méthodes issues de la littérature scientifique sont implémentées et co
 - Filtrage passe-bande de Butterworth (méthode Brønd)
 
 **Estimation du MET**
-- Méthode ENMO — norme euclidienne avec calibration par la marche
-- Méthode Counts ActiGraph — reproduction du pipeline ActiGraph à partir de données brutes
-- Méthode Berger — classification par seuils ROC
+- Méthode ENMO : norme euclidienne avec calibration par la marche
+- Méthode Counts ActiGraph : reproduction du pipeline ActiGraph à partir de données brutes
+- Méthode Berger - classification par seuils ROC
 
 **Machine Learning**
 - Classifieur KNN avec optimisation du paramètre k
@@ -50,7 +50,7 @@ Trois méthodes issues de la littérature scientifique sont implémentées et co
 
 ## Méthodes implémentées
 
-### ENMO — Vanhelst (2019)
+### ENMO - Vanhelst (2019)
 Calcul de la norme euclidienne du mouvement (Euclidean Norm Minus One) après suppression de la composante de repos, suivi d'un lissage sur 1 seconde et d'une calibration à partir de la marche.
 
 ```
@@ -58,14 +58,14 @@ ENMO(t) = max(0, VM_std(t) − VM_repos)
 MET(t) = 1 + ENMO(t) × facteur_marche
 ```
 
-### Counts ActiGraph — Brønd (2017)
+### Counts ActiGraph - Brønd (2017)
 Reproduction du principe des counts ActiGraph : filtrage passe-bande [0.29–1.63 Hz], rectification, quantification et accumulation des signaux par seconde sur chaque axe.
 
 ```
 VM_counts = √(cx² + cy² + cz²)
 ```
 
-### Berger — (2024)
+### Berger - (2024)
 Classification par seuils recalculés via courbes ROC, produisant un MET discret à trois niveaux d'intensité.
 
 ```
@@ -74,7 +74,7 @@ MET(t) = 1.2  si VM < S1
           3.5  si VM ≥ S2
 ```
 
-### KNN — K-Nearest Neighbors
+### KNN - K-Nearest Neighbors
 Classifieur supervisé entraîné sur les valeurs MET estimées pour prédire automatiquement l'activité physique. Paramètre k optimisé par validation croisée.
 
 ---
@@ -127,7 +127,7 @@ Les méthodes ENMO et Brønd reproduisent correctement la progression des activi
 
 ![Résultats KNN](images/fig7_knn.png)
 
-- **Meilleur k** : 10 — Précision : **85,05 %**
+- **Meilleur k** : 10 - Précision : **85,05 %**
 - Course 1 : 23/24 correctement classifiées | Course 2 : 32/34
 - Confusions principales : Vélo ↔ Marche (MET proches), Dactylographie ↔ Repos
 
@@ -182,11 +182,11 @@ accelerometrie/
 
 Une interface interactive permet l'exploration des résultats sans exécuter le notebook.
 
-**Onglet Prédiction** — Saisie d'une valeur MET → activité prédite par le KNN + barre de niveau d'effort colorée (Sédentaire / Légère / Modérée / Vigoureuse)
+**Onglet Prédiction** - Saisie d'une valeur MET → activité prédite par le KNN + barre de niveau d'effort colorée (Sédentaire / Légère / Modérée / Vigoureuse)
 
-**Onglet Résultats** — Tableau des métriques avec mise en évidence automatique de la meilleure méthode
+**Onglet Résultats** - Tableau des métriques avec mise en évidence automatique de la meilleure méthode
 
-**Onglet Figures** — Grille des 13 figures générées avec ouverture directe
+**Onglet Figures** - Grille des 13 figures générées avec ouverture directe
 
 ---
 
