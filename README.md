@@ -168,12 +168,12 @@ Visualisation & Interface Tkinter
 ```
 accelerometrie/
 ├── accélérométrie.ipynb     # Notebook principal
-├── data/
-│   └── data.xls             # Données expérimentales
-├── output/
-│   ├── stats_methodes.xlsx  # Métriques statistiques
-│   └── figures/             # Graphiques générés automatiquement
+├── data.xls             # Données expérimentales
+├── stats_methodes.xlsx  # Métriques statistiques
+├── fig#***.png  # Graphiques générés automatiquement
 └── images/                  # Captures pour le README
+
+NB : Les figures et fichiers .xls sont générés automatiquement après exécution du code
 ```
 
 ---
