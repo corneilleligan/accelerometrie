@@ -190,7 +190,7 @@ Une interface interactive permet l'exploration des résultats sans exécuter le 
 
 ---
 
-## Dépendances principales**
+## Dépendances principales
 
 ```
 numpy
